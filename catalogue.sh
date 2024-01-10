@@ -38,7 +38,7 @@ VALIDATE $? "INSTALLING NODEJS"
 
 USER=$(id roboshop)
 
-if [ $USER -ne 0 ];
+if [ $USER -ne 0 ]
 
 then
 
@@ -65,6 +65,9 @@ then
 else
 
     echo -e "$G FOLDER ALREADY EXISTS $N"
+
+fi
+
 VALIDATE $? "CREATING FOLDER"
 
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip &>>$LOGFILE
