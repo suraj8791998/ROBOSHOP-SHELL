@@ -38,7 +38,7 @@ VALIDATE $? "INSTALLING NODEJS"
 
 USER=$(id roboshop)
 
-if [ $USER -ne 0]
+if [ $USER -ne 0 ];
 
 then
 
