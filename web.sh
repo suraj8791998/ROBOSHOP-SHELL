@@ -1,3 +1,5 @@
+#!/bin/bash
+
 DATE=$(date +%F)
 LOGSDIR=/tmp
 # /home/centos/shellscript-logs/script-name-date.log
