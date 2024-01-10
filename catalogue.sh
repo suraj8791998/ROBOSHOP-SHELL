@@ -52,23 +52,8 @@ else
 
 fi
 
-FIND_APP=$(sudo find / -type d -name "/app")
+mkdir /app
 
-if [ $FIND_APP -ne 0 ]
-
-then
-  
-     echo -e "$R ERROR :: FOLDER NOT FOUND $N"
-
-     mkdir /app
-
-else
-
-    echo -e "$G FOLDER ALREADY EXISTS $N"
-
-fi
-
-VALIDATE $? "CREATING FOLDER"
 
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip &>>$LOGFILE
 
