@@ -52,7 +52,7 @@ else
 
 fi
 
-FIND_APP=$(sudo find / -type d -name "app")
+FIND_APP=$(sudo find / -type d -name "/app")
 
 if [ $FIND_APP -ne 0 ]
 
