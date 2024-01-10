@@ -36,13 +36,22 @@ yum install nodejs -y &>>$LOGFILE
 
 VALIDATE $? "INSTALLING NODEJS" 
 
-useradd roboshop &>>$LOGFILE
+USER=$(id roboshop)
 
-VALIDATE $? "ADDING USER" 
+if [ $USER -ne 0]
 
-mkdir /app &>>$LOGFILE
+then
 
-VALIDATE $? "CREATING A  FOLDER" 
+    echo -e "$R USER NOT FOUND, LET'S CREATE A USER ROBOSHOP $N"  
+
+    useradd roboshop &>>$LOGFILE
+
+else
+   
+   echo -e "$G USER ALREADY EXISTS $N"
+
+fi
+
 
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip &>>$LOGFILE
 
