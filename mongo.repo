@@ -2,6 +2,10 @@
 name=MongoDB Repository
 baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.2/x86_64/
 gpgcheck=0
+<<<<<<< HEAD
 enabled=1
 
 
+=======
+enabled=1
+>>>>>>> 68398939ce0743ed4e0e4d419f12f62ce6281cd4

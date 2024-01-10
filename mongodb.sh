@@ -2,6 +2,7 @@
 
 DATE=$(date +%F)
 LOGSDIR=/tmp
+
 # /home/centos/shellscript-logs/script-name-date.log
 SCRIPT_NAME=$0
 LOGFILE=$LOGSDIR/$0-$DATE.log
@@ -51,3 +52,10 @@ VALIDATE $? "Edited MongoDB conf"
 systemctl restart mongod &>> $LOGFILE
 
 VALIDATE $? "Restarting MonogoDB"
+
+
+
+
+
+
+
