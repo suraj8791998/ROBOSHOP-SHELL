@@ -31,7 +31,7 @@ yum install maven -y &>>$LOGFILE
 
 VALIDATE $? "Installing Maven"
 
-useradd roboshop &>>$LOGFILE
+#useradd roboshop &>>$LOGFILE
 
 mkdir /app &>>$LOGFILE
 
@@ -55,7 +55,7 @@ mv target/shipping-1.0.jar shipping.jar &>>$LOGFILE
 
 VALIDATE $? "renaming shipping jar"
 
-cp /home/centos/roboshop-shell-tf/shipping.service /etc/systemd/system/shipping.service &>>$LOGFILE
+cp /home/centos/ROBOSHOP-SHELL/shipping.service /etc/systemd/system/shipping.service &>>$LOGFILE
 
 VALIDATE $? "copying shipping service"
 
