@@ -71,7 +71,7 @@ npm install  &>>$LOGFILE
 
 VALIDATE $? "INSTALLING THE DEPENDENCIES"
 
-cp /home/centos/ROBOSHOP-SHELL/user.service /etc/systemd/system/user.service &>>$LOGFILE
+cp /home/centos/ROBOSHOP-SHELL/user.service  /etc/systemd/system/user.service &>>$LOGFILE
 
 VALIDATE $? "COPYING THE SERVICE"
 
@@ -87,7 +87,7 @@ systemctl start user &>>$LOGFILE
 
 VALIDATE $? "STARTING USER"
 
-cp /home/centos/mongo.repo /etc/yum.repos.d/mongo.repo &>>$LOGFILE
+cp /home/centos/ROBOSHOP-SHELL/mongo.repo /etc/yum.repos.d/mongo.repo &>>$LOGFILE
 
 VALIDATE $? "COPYTING THE SERVICE"
 
