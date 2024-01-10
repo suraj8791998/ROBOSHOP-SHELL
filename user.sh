@@ -35,9 +35,9 @@ yum install nodejs -y &>>$LOGFILE
 
 VALIDATE $? "INSTALLING NODEJS"
 
-useradd roboshop &>>$LOGFILE
+#useradd roboshop &>>$LOGFILE
 
-VALIDATE $? "ADDING USER"
+#VALIDATE $? "ADDING USER"
 
 mkdir /app &>>$LOGFILE
 
@@ -58,6 +58,10 @@ VALIDATE $? "UNZIPPING THE APPLICATION"
 npm install  &>>$LOGFILE
 
 VALIDATE $? "INSTALLING THE DEPENDENCIES"
+
+cp /home/centos/ROBOSHOP-SHELL/user.service /etc/systemd/system/user.service &>>$LOGFILE
+
+VALIDATE $? "COPYING THE SERVICE"
 
 systemctl daemon-reload &>>$LOGFILE
 
