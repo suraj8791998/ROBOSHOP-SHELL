@@ -95,6 +95,6 @@ yum install mongodb-org-shell -y &>>$LOGFILE
 
 VALIDATE $? "INSTALLING MONGO-REPO CLIENT"
 
-mongo --host 172.31.91.132 < /app/schema/catalogue.js &>>$LOGFILE
+mongo --host 172.31.88.38 < /app/schema/catalogue.js &>>$LOGFILE
 
 VALIDATE $? "LOADING THE SCHEMEA"
